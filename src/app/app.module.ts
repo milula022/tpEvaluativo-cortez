@@ -4,23 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AutentificacionComponent } from './modules/autentificacion/autentificacion.component';
-import { PagesComponent } from './modules/autentificacion/pages/pages.component';
-import { ModelsComponent } from './models/models.component';
-import { IniciosesionComponent } from './autentificacion/pages/iniciosesion/iniciosesion.component';
+import { SharedModule } from './modules/shared/shared.module';
+
+//FIREBASE --> importampos herramientas de la base de datos
+import { environment } from 'src/environment/environment.prod'; //vincula a la BD con la APP
+import{AngularFireModule} from '@angular/fire/compat';//trabaja con las colecciones de informacion
+import{AngularFireAuthModule} from '@angular/fire/compat/auth'; //trabaja con la autentificacion 
+import{AngularFireStorageModule} from '@angular/fire/compat/storage';//trabaja con imagenes y archivos
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutentificacionComponent,
-    PagesComponent,
-    ModelsComponent,
-    IniciosesionComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule, //importamos el modulo shared
+    AngularFireModule.initializeApp(environment.firebaseConfig), //inicializar firebase dentro del proyecto 
+    AngularFireAuthModule,
+    AngularFireStorageModule 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagesComponent } from './pages/pages.component';
+
+import { InicioRoutingModule } from './inicio-routing.module';
+
 import { HomeComponent } from './pages/home/home.component';
+
+//componentes de material
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 
 
 @NgModule({
   declarations: [
-    PagesComponent,
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    InicioRoutingModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class InicioModule { }
