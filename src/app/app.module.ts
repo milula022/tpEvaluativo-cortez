@@ -10,12 +10,14 @@ import { SharedModule } from './modules/shared/shared.module';
 import { environment } from 'src/environment/environment.prod'; //vincula a la BD con la APP
 import{AngularFireModule} from '@angular/fire/compat';//trabaja con las colecciones de informacion
 import{AngularFireAuthModule} from '@angular/fire/compat/auth'; //trabaja con la autentificacion 
-import{AngularFireStorageModule} from '@angular/fire/compat/storage';//trabaja con imagenes y archivos
+import{AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { CarruselComponent } from './inicio/components/carrusel/carrusel.component';//trabaja con imagenes y archivos
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CarruselComponent,
 
   ],
   imports: [
