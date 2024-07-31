@@ -11,14 +11,10 @@ import { environment } from 'src/environment/environment.prod'; //vincula a la B
 import{AngularFireModule} from '@angular/fire/compat';//trabaja con las colecciones de informacion
 import{AngularFireAuthModule} from '@angular/fire/compat/auth'; //trabaja con la autentificacion 
 import{AngularFireStorageModule} from '@angular/fire/compat/storage';
-import { CarruselComponent } from './inicio/components/carrusel/carrusel.component';//trabaja con imagenes y archivos
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CarruselComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +23,7 @@ import { CarruselComponent } from './inicio/components/carrusel/carrusel.compone
     SharedModule, //importamos el modulo shared
     AngularFireModule.initializeApp(environment.firebaseConfig), //inicializar firebase dentro del proyecto 
     AngularFireAuthModule,
-    AngularFireStorageModule 
+    AngularFireStorageModule,
    
   ],
   providers: [],

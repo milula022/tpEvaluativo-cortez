@@ -16,8 +16,8 @@ import { CardComponent } from './components/card/card.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    CarruselComponent,
-    CardComponent
+    CardComponent,
+    CarruselComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +25,7 @@ import { CardComponent } from './components/card/card.component';
     MatButtonModule,
     MatCardModule
   ], exports:[
-    CarruselComponent,
+
     InicioRoutingModule
 
   ]

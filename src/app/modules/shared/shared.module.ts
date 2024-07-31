@@ -13,12 +13,12 @@ import {MatMenuModule} from '@angular/material/menu';
 
 //accedemos a todas las rutas del proyecto
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { CarruselComponent } from '../inicio/components/carrusel/carrusel.component';
 
 
 
 @NgModule({
   declarations: [
-   
     NavbarComponent,
     FooterComponent
   ],
@@ -29,6 +29,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     MatToolbarModule,
     AppRoutingModule,
     MatMenuModule
+
   ],
   exports:[  //metadato de exportacion
     NavbarComponent,
